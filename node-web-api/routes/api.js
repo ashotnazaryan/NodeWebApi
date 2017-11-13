@@ -1,11 +1,11 @@
-const express = require('express');
-const router = express.Router();
-const countries = require('./countries.api');
-const cities = require('./cities.api');
+// const app = express();
+const about = require('./about/about.api');
+const dashboard = require('./dashboard/dashboard.api');
 
-/* GET home page. */
-router.get('/', (req, res, next) => {
-    res.render('index', { title: 'Express' });
-});
+// require('./about/about.api')(app); 
+// require('./dashboard/dashboard.api')(app); 
 
-module.exports = [countries, cities];
+module.exports = (app) => {
+  about(app);
+  dashboard(app);
+};
