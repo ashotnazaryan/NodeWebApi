@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 
 const api = require('./routes/api');
 
-require('./routes/api')(app);
+api(app);
 
 app.listen(process.env.PORT || 5000);
 

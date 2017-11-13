@@ -1,11 +1,11 @@
 module.exports = (app) => {
 
-	// const bodyParser = require('body-parser');
-	// app.use(bodyParser.urlencoded({ extended: true }));
-	// app.use(bodyParser.json());
-
 	app.get('/api/dashboard', (req, res, next) => {
-		res.send("dashboard");
+		res.send("get dashboard");
+	});
+
+	app.post('/api/dashboard', (req, res, next) => {
+		res.send("post dashboard");
 	});
 
 };
